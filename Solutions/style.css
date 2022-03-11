@@ -1,3 +1,4 @@
-nav-item{
-    align: right;
+.navbar-brand {
+    background-color: aquamarine;
+    padding: 15px;
 }
