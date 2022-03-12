@@ -8,23 +8,22 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <title>Frontend Bootcamp</title>
+    <title>Humidity Analysis</title>
 </head>
 
 <body>
-    <!-- This is the navbar -->
-    <nav class="navbar navbar-expand-lg bg-light navbar-light py-3">
+    <nav class="navbar navbar-expand-sm navbar-light navsmall">
         <div class="container">
             <a href="index.html" class="navbar-brand">Latitude</a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navmenu">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        <a class="nav-link dropdown-toggle" href="navmenu" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false" mr-1>Plots</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="maxtemp.html">Max Temperature</a></li>
@@ -44,29 +43,57 @@
         </div>
     </nav>
 
-    <!-- Showcase -->
-    <!-- the text-sm-start means the text will be left aligned until the screen is small -->
-    <section class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start">
-        <div class="container">
-            <!-- the flex allows the picture to be side by side with the text and the sm means the 
-        text won't change until the screen size is small. align items center and justify
-    content between make everything be in the center-->
-            <div class="d-sm-flex align-items-center justify-content-between">
-                <div class="row">
-                    <h1>Max Humidity</h1>
-                    <!-- m is margin y is class so my will increase the padding top/bottom -->
-                    <p class="lead my-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua.</p>
+    <!-- this is going to be where the visualizations are -->
+    <section class="bg-light text-dark p-5 p-lg-0 pt-lg-5 text-center text-sm-start">
+        <div class="container p-3">
+            <div class="row pb-5">
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                        <h1>Humidity</h1>
+                        <div class="row">
+                        <img class="card-img-btn" src="..\Resources\assets\images\Fig2.png" alt="humidity"></div>
+                        <!-- m is margin y is class so my will increase the padding top/bottom -->
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et doloremque tempora explicabo inventore commodi perspiciatis assumenda quo nulla quas! 
+                            Fuga a quibusdam ipsam nisi distinctio eius dolor eaque aspernatur at.</p>
+                        </p></div>
+                    </div>
                 </div>
-                <!-- the img-fluid allows the picture to adjust with the window. d-sm-block makes
+                <div class="col-lg-6">
+                    <div class="card p-5">
+                        <h2>Visualizations</h2>
+                        <!-- the img-fluid allows the picture to adjust with the window. d-sm-block makes
             the image disappear when the screen is small -->
-                <div class="row">
-                <img class="img-fluid w-50 p-5 d-none d-sm-block" src="..\Resources\assets\images\Fig2.png" alt="max temp"></div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <a href="maxtemp.html"><img class="img-fluid p-2 image-comparison"
+                                            src="..\Resources\assets\images\Fig1.png" alt="maxtemp"></a>
+                                </div>
+                                <div class="col-md-6">
+                                    <a href="humidity.html"><img class="img-fluid p-2 image-comparison"
+                                            src="..\Resources\assets\images\Fig2.png" alt="maxhumidity"></a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6"><a href="cloudiness.html"><img
+                                            class="img-fluid p-2 image-comparison"
+                                            src="..\Resources\assets\images\Fig3.png" alt="maxcloudiness"></a></div>
+                                <div class="col-md-6"><a href="windspeed.html"><img
+                                            class="img-fluid p-2 image-comparison"
+                                            src="..\Resources\assets\images\Fig4.png" alt="maxwindspeed"></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    
+
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
